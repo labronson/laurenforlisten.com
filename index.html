@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lauren Bronson — Strategy, Partnerships &amp; Experience Design</title>
-<meta name="description" content="Lauren Bronson sees the opportunity, aligns the right people, and builds premium programs and experiences that give everyone a reason to say yes.">
+<title>Lauren Bronson — Audience Insight &amp; Experience Design</title>
+<meta name="description" content="Lauren Bronson builds ideas, partnerships, programming, and details into experiences people genuinely want to be part of.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;0,800;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -30,12 +30,14 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,19,30,.97)
 .hero{min-height:100vh;background:var(--ink);display:flex;align-items:center;position:relative;overflow:hidden;padding:120px 80px 80px}
 .hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 2px,transparent 2px);background-size:26px 26px;pointer-events:none}
 .hero::after{content:'';position:absolute;top:-160px;right:-120px;width:520px;height:520px;background:radial-gradient(circle,rgba(0,108,183,.22) 0%,transparent 70%);pointer-events:none}
-.hc{max-width:960px;position:relative;z-index:1;animation:fadeUp 1s ease forwards}
+.hc{width:100%;max-width:1600px;position:relative;z-index:1;animation:fadeUp 1s ease forwards}
 .hl{font-size:11px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--yellow);margin-bottom:26px;display:flex;align-items:center;gap:12px}
-.hero h1{font-family:'Poppins',sans-serif;font-size:clamp(48px,7.5vw,104px);font-weight:800;color:var(--w);line-height:.98;margin-bottom:30px;letter-spacing:-.03em}
+.hero h1{font-family:'Poppins',sans-serif;font-size:clamp(48px,6vw,96px);font-weight:800;color:var(--w);line-height:.98;margin-bottom:30px;letter-spacing:-.03em}
 .hero h1 .r{color:var(--red)}.hero h1 .y{color:var(--yellow)}.hero h1 .b{color:var(--blue)}
+.hero-line,.hero-accent-line{display:block;white-space:nowrap}
 .hd{font-size:19px;line-height:1.7;color:rgba(255,255,255,.72);max-width:640px;margin-bottom:44px;font-weight:300}
 .hd strong{color:var(--w);font-weight:600}
+.hero-questions{max-width:none;white-space:nowrap;margin-bottom:14px}
 .ha{display:flex;gap:16px;flex-wrap:wrap}
 .bp{background:var(--yellow);color:var(--ink);padding:15px 34px;font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;transition:all .2s;display:inline-block;border-radius:4px}
 .bp:hover{transform:translateY(-3px);box-shadow:0 8px 0 -2px rgba(255,207,0,.35)}
@@ -115,7 +117,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(5,19,30,.97)
 /* STRATEGIC WORK (light cards) */
 .sg{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
 .sc{background:var(--w);border:1px solid var(--line);border-radius:12px;padding:34px;transition:all .3s;position:relative;overflow:hidden}
-.sc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:5px;background:linear-gradient(90deg,var(--red),var(--yellow),var(--blue));transform:scaleX(0);transform-origin:left;transition:transform .3s}
+.sc::after{content:'';position:absolute;bottom:0;left:0;right:0;height:5px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .3s}
 .sc:hover::after{transform:scaleX(1)}
 .sc:hover{transform:translateY(-5px);box-shadow:0 16px 40px rgba(5,19,30,.1)}
 .pt{width:100%;aspect-ratio:16/9;position:relative;overflow:hidden;margin-bottom:24px;cursor:pointer;display:block;border-radius:8px}
@@ -183,8 +185,8 @@ body.intro-lock{overflow:hidden}
 
 /* REFINED DIRECTION — brand color and modular rhythm */
 .cluster{display:none!important}
-.nl{letter-spacing:-.02em}.hero::before{background-image:linear-gradient(rgba(255,255,255,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.045) 1px,transparent 1px);background-size:64px 64px}.con::before{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:64px 64px}
-.hero h1{max-width:1050px}.hero h1 em{font-family:Georgia,serif;font-weight:400}.arbar{height:3px;border-radius:0}.tcard,.pi,.sc,.mi{border-radius:2px}.tcard::before{height:3px}.pt{border-radius:2px}
+.nl{letter-spacing:-.02em}.hero::before,.con::before{background-image:linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);background-size:64px 64px}
+.hero h1{max-width:none}.hero h1 em{font-family:Georgia,serif;font-weight:400}.arbar{height:3px;border-radius:0}.tcard,.pi,.sc,.mi{border-radius:2px}.tcard::before{height:3px}.pt{border-radius:2px}
 
 /* LOGO-LED OPENING */
 #intro{display:grid;place-items:center;background:#05131e}
@@ -201,9 +203,14 @@ body.intro-lock{overflow:hidden}
 @keyframes closeReveal{to{opacity:1;transform:translate(-50%,-50%)}}
 @keyframes progress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 
+@media(max-width:1200px){
+.hero-questions{white-space:normal;max-width:900px}
+}
+
 @media(max-width:900px){
 nav{padding:0 20px}.nls{display:none}
 .hero{padding:100px 22px 60px}.hscr{left:22px}
+.hero-line,.hero-accent-line{white-space:normal}
 .sec{padding:72px 22px}
 .ab{grid-template-columns:1fr;gap:36px}
 .thesis{grid-template-columns:1fr}
@@ -220,17 +227,17 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
 <body class="intro-lock">
 
 <!-- INTRO ANIMATION -->
-<div id="intro" aria-label="A career built around meaningful work">
+<div id="intro" aria-label="A career built around understanding what makes people care">
   <div class="intro-inner">
-    <h1 class="intro-thesis">A career built around the work<br><em>worth giving your whole self to.</em></h1>
+    <h1 class="intro-thesis">A career built around understanding<br><em>what makes people care.</em></h1>
     <div class="logo-stage" aria-label="Vans Warped Tour, My Chemical Romance, Make-A-Wish, and USO">
-      <img class="career-logo warped" src="https://thisisbronson.com/warped-tour.png" alt="Vans Warped Tour">
-      <img class="career-logo mcr" src="https://thisisbronson.com/my-chemical-romance.png" alt="My Chemical Romance">
-      <img class="career-logo wish" src="https://thisisbronson.com/make-a-wish.png" alt="Make-A-Wish">
-      <img class="career-logo uso" src="https://thisisbronson.com/uso.png" alt="USO">
+      <img class="career-logo warped" src="./warped-tour.png" alt="Vans Warped Tour">
+      <img class="career-logo mcr" src="./my-chemical-romance.png" alt="My Chemical Romance">
+      <img class="career-logo wish" src="./make-a-wish.png" alt="Make-A-Wish">
+      <img class="career-logo uso" src="./uso.png" alt="USO">
     </div>
     <div class="intro-close">
-      <h2>What comes next will be something I believe in.</h2>
+      <h2>Now I want to build what people choose to be part of.</h2>
     </div>
   </div>
   <div class="intro-progress"></div>
@@ -252,7 +259,7 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
     <li><a href="#about">About</a></li>
     <li><a href="#work">Selected Work</a></li>
     <li><a href="#build">Built From Scratch</a></li>
-    <li><a href="#media">Earned Media</a></li>
+    <li><a href="#media">Stories That Traveled</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
 </nav>
@@ -260,9 +267,10 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
 <!-- HERO -->
 <section class="hero">
   <div class="hc">
-    <div class="hl">Strategy &middot; Partnerships &middot; Experience Design &middot; Storytelling &middot; Culture</div>
-    <h1>I build the reason<br><span class="r">to say</span> <span class="y">yes.</span></h1>
-    <p class="hd">Most organizations already have more value than they realize. I find where it lives, align the right people around it, and build the program or experience that gives everyone a reason to say yes.</p>
+    <div class="hl">Audience Insight &middot; Experience Design &middot; Partnerships &middot; Brand &middot; Culture</div>
+    <h1><span class="hero-line">Experiences start with</span><span class="hero-accent-line"><span class="r">a human</span> <span class="y">question.</span></span></h1>
+    <p class="hd hero-questions"><strong>Why would someone show up? Why would they stay? What would make them remember it?</strong></p>
+    <p class="hd">I start there, then build the idea, partnerships, programming, and details that turn the answer into something people genuinely want to be part of.</p>
     <div class="ha">
       <a href="#about" class="bp">See How I Think</a>
       <a href="#work" class="bs">The Work</a>
@@ -276,14 +284,15 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
   <div class="si ab">
     <div class="fi">
       <div class="eyebrow"><span class="cluster"><i></i><i></i><i></i><i></i></span><span>About</span></div>
-      <h2>The same instinct,<br>every chapter.</h2>
+      <h2>The person before<br>the plan.</h2>
     </div>
     <div class="ar fi">
-      <p>I've built my career around work that asks for both imagination and rigor: seeing the possibility before the pieces are in place, earning trust across very different stakeholders, and carrying the idea all the way through delivery. That instinct made me Vans Warped Tour's first intern after being told the tour didn't take interns. It led me to My Chemical Romance, and eventually to two missions I believed in enough to give more than eight years to each.</p>
-      <p>The settings changed, the instinct didn't. I connect things most people treat as separate until the path forward looks obvious, then build it: finding the leverage, aligning the right people, and making something that didn't exist before. Something people feel.</p>
-      <p>Much of the work I'm proudest of was built without the budget most people would insist on. I stopped treating limited resources as an obstacle a long time ago. At this point it's just how I think.</p>
-      <p>I'm rarely building for just the immediate outcome. The best work delivers in the moment, earns the trust that makes the next thing possible, and leaves behind a stronger way of working. I've done this inside organizations that operate at real scale &mdash; big audiences, distributed teams, real stakes &mdash; which is why I've never treated strategy and execution as separate skills. At that level, they're the same job.</p>
-      <p>Underneath all of it, the work has to feel true to the people it is for. If it involves a child, a service member, a fan, a community, or a senior stakeholder, they are never a device. They are the point. That is what turns strategy into something people remember.</p>
+      <p>I’ve spent my career building experiences around a question that comes before the venue, guest list, talent, or production plan: <strong>why would this particular person want to be part of this?</strong></p>
+      <p>Sometimes the answer was belonging. Sometimes access. Sometimes curiosity, recognition, service, or the chance to be close to something they already cared deeply about. Finding that answer changed what I built.</p>
+      <p>It’s why I don’t separate audience insight from creative strategy. The strongest idea usually appears when you understand what matters to the people in the room, what matters to the partner helping bring them there, and where those motivations overlap. That is where an event stops being something people attend and starts becoming something they choose.</p>
+      <p>I’m a builder by nature. I like the blank page, the overlooked opportunity, and the constraint that forces a better idea. Much of the work I’m proudest of started without a playbook, a traditional event budget, or even an obvious path forward. I learned to find the leverage, align the right people, and build from whatever was actually available.</p>
+      <p>Then I get very operational. The idea only matters if it works in the room. Programming, partners, guest experience, briefing materials, travel, production, the thing somebody forgot to order: I care about the details because they are where the strategy becomes an experience.</p>
+      <p>The goal is never simply a successful event. It is an experience people remember, a relationship that gets stronger because of it, and, when something works, a model worth building on.</p>
       <div class="arbar"></div>
     </div>
   </div>
@@ -294,11 +303,11 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
   <div class="si">
     <div class="shd fi">
       <div class="eyebrow"><span class="cluster"><i></i><i></i><i></i><i></i></span><span>Selected Work</span></div>
-      <h2 class="st">Strategy people could step into.</h2>
-      <p class="ss" style="max-width:1120px;">Across global nonprofits, entertainment, and community programs, I found the opportunity, aligned the stakeholders, and built the experience from concept through execution. The forms changed; the operating instinct did not.</p>
+      <h2 class="st">Built around the reason people care.</h2>
+      <p class="ss" style="max-width:1120px;">Across entertainment, military communities, families, fans, and global partners, the audiences changed. The starting point didn’t: understand what would make the experience matter, then build around it.</p>
     </div>
 
-    <div class="subdiv fi"><div class="subdiv-label">Partnership Strategy + Experiential Execution</div><div class="subdiv-line"></div></div>
+    <div class="subdiv fi"><div class="subdiv-label">Audience + Experience + Partnership</div><div class="subdiv-line"></div></div>
     <div class="pg">
       <div class="pi s2 fi">
         <div class="inn">
@@ -318,7 +327,7 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
 
       <div class="pi fi">
         <a href="https://www.instagram.com/p/CmZ1yNiJ9mg/" target="_blank" class="it">
-          <img src="https://thisisbronson.com/john.jpg" alt="John Krasinski / Jack Ryan">
+          <img src="./john.jpg" alt="John Krasinski / Jack Ryan">
           <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
         </a>
         <div class="ib">
@@ -332,7 +341,7 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
 
       <div class="pi fi">
         <a href="https://youtu.be/onSvz8VpzrY" target="_blank" class="it">
-          <img src="https://thisisbronson.com/jake.jpeg" alt="Jake Gyllenhaal / The Covenant">
+          <img src="./jake.jpeg" alt="Jake Gyllenhaal / The Covenant">
           <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
         </a>
         <div class="ib">
@@ -346,7 +355,7 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
 
       <div class="pi fi">
         <a href="https://www.youtube.com/shorts/JsVDMG4hESo" target="_blank" class="it">
-          <img src="https://thisisbronson.com/Bikeriders.png" alt="The Bikeriders">
+          <img src="./Bikeriders.png" alt="The Bikeriders">
           <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
         </a>
         <div class="ib">
@@ -360,7 +369,7 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
 
       <div class="pi fi">
         <a href="https://www.instagram.com/p/DOL0C-GEdWt/" target="_blank" class="it">
-          <img src="https://thisisbronson.com/wolf.png" alt="Taylor Kitsch / Dark Wolf">
+          <img src="./wolf.png" alt="Taylor Kitsch / Dark Wolf">
           <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
         </a>
         <div class="ib">
@@ -374,7 +383,8 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
       <div class="pi ghost"></div>
     </div>
 
-    <div class="subdiv fi"><div class="subdiv-label">Unexpected Ways In</div><div class="subdiv-line"></div></div>
+    <div class="subdiv fi"><div class="subdiv-label">Find the Way In</div><div class="subdiv-line"></div></div>
+    <p class="ss fi" style="margin-bottom:36px;max-width:100%;">Not every great experience starts with the perfect brief, budget, or yes. Sometimes the work is finding the version people <em>can</em> say yes to, then making that first step matter.</p>
     <div class="pg">
       <div class="pi s2 fi">
         <div class="inn">
@@ -386,7 +396,7 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
             <a href="https://youtu.be/hzhORnOuujM" target="_blank" class="il">WATCH THE VIDEO &#8594;</a>
           </div>
           <a href="https://youtu.be/hzhORnOuujM" target="_blank" class="it" style="min-height:300px;height:100%;">
-            <img src="https://thisisbronson.com/snoop.png" alt="Snoop Dogg USO Virtual Tour">
+            <img src="./snoop.png" alt="Snoop Dogg USO Virtual Tour">
             <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
           </a>
         </div>
@@ -395,7 +405,7 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
       <div class="pi s2 fi">
         <div class="inn">
           <a href="https://www.instagram.com/p/DGluuxPPHWT/?hl=en" target="_blank" class="it" style="min-height:300px;height:100%;">
-            <img src="https://thisisbronson.com/dave.png" alt="Dave Portnoy / Miss Peaches">
+            <img src="./dave.png" alt="Dave Portnoy / Miss Peaches">
             <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
           </a>
           <div class="ib">
@@ -408,10 +418,15 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
         </div>
       </div>
 
+    </div>
+
+    <div class="subdiv fi"><div class="subdiv-label">Experience, Designed Around One Person</div><div class="subdiv-line"></div></div>
+    <p class="ss fi" style="margin-bottom:36px;max-width:100%;">The scale can change completely without changing the principle. Sometimes the entire experience begins with understanding one person well enough to make every touchpoint feel intentional.</p>
+    <div class="pg">
       <div class="pi s2 fi">
         <div class="inn">
           <a href="https://www.youtube.com/watch?v=Oq2_h6KU4aw" target="_blank" class="it" style="min-height:300px;height:100%;">
-            <img src="https://thisisbronson.com/cayden.png" alt="Cayden's personalized pop-star wish experience">
+            <img src="./cayden.png" alt="Cayden's personalized pop-star wish experience">
             <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
           </a>
           <div class="ib">
@@ -436,26 +451,27 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
   <div class="si">
     <div class="shd fi">
       <div class="eyebrow"><span class="cluster"><i></i><i></i><i></i><i></i></span><span>Built From Scratch</span></div>
-      <h2 class="st">Beyond the assignment.</h2>
-      <p class="ss" style="max-width:900px;">Two ideas I could not leave alone. One solved a partnership problem. The other reimagined the organization itself.</p>
+      <h2 class="st">The blank page is my favorite part.</h2>
+      <p class="ss" style="max-width:900px;">Some of my best work started outside the assignment: an opportunity I couldn’t stop seeing, a problem that needed a different answer, or an idea worth building before anyone asked for it.</p>
+      <p class="ss" style="max-width:900px;margin-top:18px;">One reimagined how an organization could create cultural relevance at scale. The other turned an impossible promotional constraint into an entirely different kind of partnership opportunity.</p>
     </div>
     <div class="sg">
       <div class="sc fi" style="order:2;">
-        <div class="pt" onclick="openLB('https://thisisbronson.com/deck.pdf')">
-          <img src="https://thisisbronson.com/deckimage.png" alt="USO Strategic Framework">
+        <div class="pt" onclick="openLB('./deck.pdf')">
+          <img src="./deckimage.png" alt="USO Strategic Framework">
           <div class="pt-over"><div class="pt-cta">Click to view &#8594;</div></div>
         </div>
         <div class="ctg">Organizational Strategy | Executive Brief</div>
         <h3 class="cti">USO Strategic Framework &amp; Executive One-Sheet</h3>
         <p class="cde">I saw a larger future for an organization I believed in, so I put it on paper. I developed a 14-page enterprise strategy for positioning the USO as America&#8217;s nonprofit, then distilled it into a one-page executive brief. The framework made visibility, storytelling, and cultural engagement part of mission delivery. It sequenced awareness before affinity and giving, and reimagined entertainment, sports, and transitions around scale, trust, and distinctive value. I sent both to the incoming CEO because loyalty to an organization includes offering your clearest thinking, even when no one has asked for it.</p>
         <div class="cls">
-          <button class="cl" onclick="openLB('https://thisisbronson.com/deck.pdf')">View the Framework &#8594;</button>
-          <button class="cl" onclick="openLB('https://thisisbronson.com/one-sheet.pdf')">View the One-Sheet &#8594;</button>
+          <button class="cl" onclick="openLB('./deck.pdf')">View the Framework &#8594;</button>
+          <button class="cl" onclick="openLB('./one-sheet.pdf')">View the One-Sheet &#8594;</button>
         </div>
       </div>
       <div class="sc fi" style="order:1;">
-        <div class="pt" onclick="openLB('https://thisisbronson.com/dunkin.pdf')">
-          <img src="https://thisisbronson.com/cup.png" alt="PRESSURE x Dunkin x USO">
+        <div class="pt" onclick="openLB('./dunkin.pdf')">
+          <img src="./cup.png" alt="PRESSURE x Dunkin x USO">
           <div class="pt-over"><div class="pt-cta">Click to view &#8594;</div></div>
         </div>
         <div class="ctg">Partnership Concept | Strategic Pivot</div>
@@ -463,21 +479,21 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
         <p class="cde">A three-way brand integration anchored to Memorial Day and the film’s D-Day narrative. The 72&#162; donation mirrored the film’s 72-hour theme, spanning a limited-edition Dunkin’ cup, talent appearances, and service-member screenings. The exchange gave the studio a cultural story when traditional media was unavailable, Dunkin’ an authentic role in a patriotic moment, the USO awareness and a fundraising path, and Americans an easy way to support those who serve.</p>
         <p class="cde">When world events made talent-led military promotion impossible, I moved the story to an overlooked collection of World War II letters. I brought in Legacybox to digitize them at no cost, then built a public archive around their human story of D-Day and a studio-funded mission immersion at Fort Campbell for 14 media and creators.</p>
         <div class="cls">
-          <button class="cl" onclick="openLB('https://thisisbronson.com/dunkin.pdf')">View the Dunkin’ Pitch &#8594;</button>
-          <button class="cl" onclick="openLB('https://thisisbronson.com/letters.pdf')">View the Letters Home Proposal &#8594;</button>
+          <button class="cl" onclick="openLB('./dunkin.pdf')">View the Dunkin’ Pitch &#8594;</button>
+          <button class="cl" onclick="openLB('./letters.pdf')">View the Letters Home Proposal &#8594;</button>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EARNED MEDIA -->
+<!-- STORIES THAT TRAVELED -->
 <section id="media" class="sec sink">
   <div class="si">
     <div class="shd fi">
-      <div class="eyebrow"><span class="cluster"><i></i><i></i><i></i><i></i></span><span>Earned Media</span></div>
-      <h2 class="st">Stories built to travel.</h2>
-      <p class="ss">An authentic experience gives a story somewhere to begin. The ones that travel are the ones that land, and remind us what we share.</p>
+      <div class="eyebrow"><span class="cluster"><i></i><i></i><i></i><i></i></span><span>Stories That Traveled</span></div>
+      <h2 class="st">The experience comes first. The story follows.</h2>
+      <p class="ss">I never designed an experience simply to generate coverage. But when something is true to the people at its center, there is often a story other people recognize themselves in. Those are the stories that travel.</p>
     </div>
 
     <div class="subdiv fi"><div class="subdiv-label">USO</div><div class="subdiv-line"></div></div>
@@ -485,7 +501,7 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
       <div class="pi s2 fi">
         <div class="inn">
           <a href="https://www.facebook.com/theUSO/posts/sailors-at-naval-station-norfolk-got-a-visit-from-the-great-food-truck-race-fina/1252801533551913/" target="_blank" class="it">
-            <img src="https://thisisbronson.com/tgftr.jpeg" alt="The Great Food Truck Race">
+            <img src="./tgftr.jpeg" alt="The Great Food Truck Race">
             <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
           </a>
           <div class="ib">
@@ -521,7 +537,7 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
             <a href="https://www.today.com/video/make-a-wish-foundation-makes-7-kids-dreams-come-true-at-grammys-1148418627524" target="_blank" class="il">WATCH THE VIDEO &#8594;</a>
           </div>
           <a href="https://www.today.com/video/make-a-wish-foundation-makes-7-kids-dreams-come-true-at-grammys-1148418627524" target="_blank" class="it">
-            <img src="https://thisisbronson.com/grammys.png" alt="Make-A-Wish Kids at the GRAMMYs">
+            <img src="./grammys.png" alt="Make-A-Wish Kids at the GRAMMYs">
             <div class="tov"><div class="pb"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div>
           </a>
         </div>
@@ -549,7 +565,7 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
 <!-- CONTACT -->
 <section class="con" id="contact">
   <div class="coni fi">
-    <h2>Let's build something<br><em>worth remembering.</em></h2>
+    <h2>Let’s build something<br><em>worth remembering.</em></h2>
     <div class="ctl">
       <a href="mailto:laurenbronson@gmail.com" class="bp">laurenbronson@gmail.com</a>
       <a href="https://www.linkedin.com/in/laurenbronson" target="_blank" class="bs">LinkedIn</a>
@@ -558,8 +574,8 @@ footer{padding:24px 22px;flex-direction:column;gap:12px;text-align:center}
 </section>
 
 <footer>
-  <div class="fl">Lauren Bronson</div>
-  <p>&copy; 2026 Lauren Bronson &middot; thisisbronson.com</p>
+  <div class="fl">Currently in California &middot; Relocating to San Francisco Bay Area</div>
+  <p>&copy; 2026 Lauren Bronson &middot; Built for Listen Labs</p>
 </footer>
 
 <script>
